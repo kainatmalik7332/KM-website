@@ -1,0 +1,289 @@
+/* =====================
+   GLOBAL STYLES
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background: #0f1f23;
+  color: #f2f2f2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+body.dark .header {
+  background: #0f1f23;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.brand img {
+  height: 42px;
+}
+
+nav a {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+#themeToggle {
+  margin-left: 20px;
+  border: none;
+  background: #3b656f;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  height: 100vh;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.buttons button,
+.buttons a {
+  padding: 12px 28px;
+  margin: 8px;
+  border-radius: 30px;
+  border: none;
+  background: #3b656f;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.buttons .outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 100px 12%;
+  text-align: center;
+}
+
+.section.alt {
+  background: #f2f6f7;
+}
+
+body.dark .section.alt {
+  background: #132b30;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* =====================
+   GRID ITEMS
+===================== */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.item {
+  padding: 30px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-6px);
+}
+
+body.dark .item {
+  background: #1c3a40;
+}
+
+/* =====================
+   CLIENT TRUST
+===================== */
+.trust .stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+}
+
+.stats div {
+  padding: 35px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #3b656f, #5f8f99);
+  color: #fff;
+}
+
+.stats h3 {
+  font-size: 2.5rem;
+}
+
+/* =====================
+   FAQ
+===================== */
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.faq-item {
+  background: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.dark .faq-item {
+  background: #1c3a40;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 18px 22px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 22px;
+  transition: all 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 15px 22px 22px;
+}
+
+/* =====================
+   MODAL FORM
+===================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+}
+
+.modal form {
+  background: #ffffff;
+  max-width: 400px;
+  margin: 8% auto;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal input,
+.modal textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal button {
+  background: #3b656f;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
